@@ -1,10 +1,9 @@
 from flask import Flask, session, request, g, current_app
-import inspect, shutil, os
+import inspect, subprocess
 
 def new():
-    path_old = './new'
-    path_new = os.getcwd()
-    shutil.copytree(path_old, path_new)
+    remote = 'https://github.com/HY-nicochichi/ezapp'
+    subprocess.run(['git', 'clone', remote])
 
 class EZapp(Flask):
 
