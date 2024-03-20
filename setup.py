@@ -9,7 +9,7 @@ setup(
     name='Flask-EZapp',
     version='0.1.0',
     packages=find_packages(where='flask_ezapp'),
-    package_dir={'': 'flask_ezapp'},
+    package_dir={'flask_ezapp': 'flask_ezapp'},
     author='HY-nicochichi',
     description='This is a library in order to easily create large-scale web apps with Flask !!!',
     install_requires=get_requirements(),
