@@ -15,7 +15,6 @@ class EZapp(Flask):
     
     def app_setup(self, router_list):
         file = inspect.stack()[1].filename[:-7]+'setting.py'
-        print(file)
         self.config.from_pyfile(file)
         for router in router_list:
             self.register_blueprint(router)
