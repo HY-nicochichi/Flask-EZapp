@@ -2,7 +2,6 @@ from flask import Flask, session, request, g, current_app
 import inspect, shutil, os
 
 def new():
-    print("new new neeeeeeeew !!!!!")
     path_old = './new'
     path_new = os.getcwd()
     shutil.copytree(path_old, path_new)
