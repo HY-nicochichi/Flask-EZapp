@@ -1,6 +1,9 @@
 from flask import Flask, session, request, g, current_app
 import inspect
 
+def new():
+    print("new new neeeeeeeew !!!!!")
+
 class EZapp(Flask):
 
     def __init__(self, host_matching=False, subdomain_matching=False, root_path=None):

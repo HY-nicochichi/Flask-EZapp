@@ -11,5 +11,10 @@ setup(
     packages=find_packages(),
     author='HY-nicochichi',
     description='This is a library in order to easily create large-scale web apps with Flask !!!',
-    install_requires=get_requirements()
+    install_requires=get_requirements(),
+    entry_points={
+        "console_scripts": [
+            "ezapp_new = flask_ezapp:new"
+        ]
+    }
 )
