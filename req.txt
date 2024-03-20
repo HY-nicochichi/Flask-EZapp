@@ -1,5 +1,4 @@
 alembic
-APScheduler
 Beaker
 blinker
 cachelib
@@ -8,11 +7,12 @@ click
 colorama
 cryptography
 Flask
-Flask-APScheduler
 Flask-Migrate
 Flask-SQLAlchemy
+flask-talisman
 Flask-WTF
 greenlet
+gunicorn
 itsdangerous
 Jinja2
 Mako

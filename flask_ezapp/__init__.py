@@ -1,15 +1,19 @@
 from flask import Flask, session, request, g, current_app
-import inspect
+import inspect, shutil, os
 
 def new():
     print("new new neeeeeeeew !!!!!")
+    path_old = './new'
+    path_new = os.getcwd()
+    shutil.copytree(path_old, path_new)
 
 class EZapp(Flask):
 
     def __init__(self, host_matching=False, subdomain_matching=False, root_path=None):
         static = inspect.stack()[1].filename[:-7]+'static'
         views = inspect.stack()[1].filename[:-7]+'views'
-        super().__init__('EZapp', None, static, None, host_matching, subdomain_matching, views, None, False, root_path)
+        localdb = inspect.stack()[1].filename[:-7]+'localdb'
+        super().__init__('EZapp', None, static, None, host_matching, subdomain_matching, views, localdb, False, root_path)
     
     def app_setup(self, router_list):
         file = inspect.stack()[1].filename[:-7]+'setting.py'
